@@ -14,6 +14,7 @@ fun main() {
     val arrivalMinute = arrivalTotalMinutes % MINUTES_IN_HOUR
 
     println("Train will arrive at %02d:%02d".format(arrivalHour, arrivalMinute))
+
 }
 
 const val MINUTES_IN_HOUR = 60
