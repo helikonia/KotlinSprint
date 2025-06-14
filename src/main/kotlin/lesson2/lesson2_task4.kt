@@ -4,7 +4,8 @@ fun main() {
 
     val minedCrystalOre = 7
     val minedIronOre = 11
-    val miningBuffPercentage = 0.2f
+    val miningBuffPercents = 20f
+    val miningBuffPercentage: Float = miningBuffPercents / PERCENTAGE
 
     val buffGainedCrystalOre = minedCrystalOre * miningBuffPercentage
     val wholeBuffGainedCrystalOre = buffGainedCrystalOre.toInt()
@@ -15,3 +16,5 @@ fun main() {
     println(wholeBuffGainedIronOre)
 
 }
+
+const val PERCENTAGE = 100
