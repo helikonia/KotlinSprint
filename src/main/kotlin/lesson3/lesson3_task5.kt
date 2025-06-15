@@ -4,8 +4,7 @@ fun main() {
 
     val chessMove = "D2-D4;0"
 
-    val (fromTo, moveNumber) = chessMove.split(";")
-    val (from, to) = fromTo.split("-")
+    val (from, to, moveNumber) = chessMove.split("-", ";")
 
     println("From: $from")
     println("To: $to")
