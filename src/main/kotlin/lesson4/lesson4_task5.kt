@@ -12,18 +12,18 @@ fun main() {
             val noDamageInput: Boolean? = parts[0].toBooleanStrictOrNull()
             val crewMembersInput: Int? = parts[1].toIntOrNull()
             val provisionBoxesInput: Int? = parts[2].toIntOrNull()
-            val goodWeatherInput: Boolean? = parts[3]. toBooleanStrictOrNull()
+            val goodWeatherInput: Boolean? = parts[3].toBooleanStrictOrNull()
 
-            val shipIsReady = (noDamageInput == SHIP_NO_DAMAGE_IDEAL && crewMembersInput in SHIP_CREW_MIN .. SHIP_CREW_MAX && provisionBoxesInput!! > PROVISION_BOXES_MIN && (goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL || goodWeatherInput != GOOD_WEATHER_QUALITY_IDEAL) ) || (noDamageInput != SHIP_NO_DAMAGE_IDEAL && crewMembersInput == SHIP_CREW_MAX && goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL && provisionBoxesInput!! >= PROVISION_BOXES_MIN)
+            val shipIsReady =
+                (noDamageInput == SHIP_NO_DAMAGE_IDEAL && crewMembersInput in SHIP_CREW_MIN..SHIP_CREW_MAX && provisionBoxesInput!! > PROVISION_BOXES_MIN && (goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL || goodWeatherInput != GOOD_WEATHER_QUALITY_IDEAL)) || (noDamageInput != SHIP_NO_DAMAGE_IDEAL && crewMembersInput == SHIP_CREW_MAX && goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL && provisionBoxesInput!! >= PROVISION_BOXES_MIN)
 
 
             println("Ship is ready for an expedition: $shipIsReady!")
 
 
-            if (noDamageInput != null && crewMembersInput != null && provisionBoxesInput != null && goodWeatherInput != null )
+            if (noDamageInput != null && crewMembersInput != null && provisionBoxesInput != null && goodWeatherInput != null)
                 println("You entered: ship has no damage - $noDamageInput, amount of crew members - $crewMembersInput, amount of provision boxes - $provisionBoxesInput, good weather quality - $goodWeatherInput")
-
-                else {
+            else {
                 println("Error: transformation process failed")
             }
         } else {
@@ -33,7 +33,6 @@ fun main() {
         println("Input is empty")
 
     }
-
 
 
 }
