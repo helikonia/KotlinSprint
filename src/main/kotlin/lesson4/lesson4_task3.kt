@@ -2,15 +2,23 @@ package org.example.lesson4
 
 fun main() {
 
-    val sunnyWeatherIdeal: Boolean = true
-    val openedTentIdeal: Boolean = true
+    val isSunny = true
+    val isAwningOpen = true
     val airHumidityPercentsIdeal = 20
-    val seasonIdeal = "not winter"
+    val istOf = null
+    val wrongSeason = "winter"
 
-    val sunnyWeatherToday = true
-    val openedTentNow = true
+    val isSunnyToday = true
+    val isAwningOpenNow = true
     val airHumidityPercentsNow = 20
     val currentSeason = "winter"
 
-    println("Good conditions: ${sunnyWeatherToday == sunnyWeatherIdeal && openedTentNow == openedTentIdeal && airHumidityPercentsNow == airHumidityPercentsIdeal && currentSeason == seasonIdeal}")
+    println(
+        "Good conditions: ${
+            isSunnyToday == isSunny &&
+                    isAwningOpenNow == isAwningOpen &&
+                    airHumidityPercentsNow == airHumidityPercentsIdeal &&
+                    currentSeason != wrongSeason 
+        }"
+    )
 }
