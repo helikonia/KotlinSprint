@@ -5,7 +5,6 @@ fun main() {
     val isSunny = true
     val isAwningOpen = true
     val airHumidityPercentsIdeal = 20
-    val istOf = null
     val wrongSeason = "winter"
 
     val isSunnyToday = true
