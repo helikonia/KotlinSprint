@@ -1,7 +1,6 @@
 package org.example.lesson4
 
 fun main() {
-
     println("Enter with spaces: the ship has no damage: true/false, amount of crew members, amount of provision boxes, weather quality is good: true/false")
 
     val input = readLine()
@@ -14,12 +13,19 @@ fun main() {
             val provisionBoxesInput: Int? = parts[2].toIntOrNull()
             val goodWeatherInput: Boolean? = parts[3].toBooleanStrictOrNull()
 
-            val shipIsReady =
-                (noDamageInput == SHIP_NO_DAMAGE_IDEAL && crewMembersInput in SHIP_CREW_MIN..SHIP_CREW_MAX && provisionBoxesInput!! > PROVISION_BOXES_MIN && (goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL || goodWeatherInput != GOOD_WEATHER_QUALITY_IDEAL)) || (noDamageInput != SHIP_NO_DAMAGE_IDEAL && crewMembersInput == SHIP_CREW_MAX && goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL && provisionBoxesInput!! >= PROVISION_BOXES_MIN)
+            val shipIsNotDamaged = (noDamageInput == SHIP_NO_DAMAGE_IDEAL &&
+                    crewMembersInput in SHIP_CREW_MIN..SHIP_CREW_MAX &&
+                    provisionBoxesInput!! > PROVISION_BOXES_MIN &&
+                    (goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL ||
+                            goodWeatherInput != GOOD_WEATHER_QUALITY_IDEAL))
 
+            val shipIsDamaged = (noDamageInput != SHIP_NO_DAMAGE_IDEAL &&
+                    crewMembersInput == SHIP_CREW_MAX &&
+                    goodWeatherInput == GOOD_WEATHER_QUALITY_IDEAL &&
+                    provisionBoxesInput!! >= PROVISION_BOXES_MIN)
 
+            val shipIsReady = shipIsNotDamaged || shipIsDamaged
             println("Ship is ready for an expedition: $shipIsReady!")
-
 
             if (noDamageInput != null && crewMembersInput != null && provisionBoxesInput != null && goodWeatherInput != null)
                 println("You entered: ship has no damage - $noDamageInput, amount of crew members - $crewMembersInput, amount of provision boxes - $provisionBoxesInput, good weather quality - $goodWeatherInput")
@@ -31,12 +37,8 @@ fun main() {
         }
     } else {
         println("Input is empty")
-
     }
-
-
 }
-
 const val SHIP_NO_DAMAGE_IDEAL = true
 const val SHIP_CREW_MIN = 55
 const val SHIP_CREW_MAX = 70
