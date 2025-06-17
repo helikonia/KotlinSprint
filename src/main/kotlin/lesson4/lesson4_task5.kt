@@ -39,6 +39,7 @@ fun main() {
         println("Input is empty")
     }
 }
+
 const val SHIP_NO_DAMAGE_IDEAL = true
 const val SHIP_CREW_MIN = 55
 const val SHIP_CREW_MAX = 70
