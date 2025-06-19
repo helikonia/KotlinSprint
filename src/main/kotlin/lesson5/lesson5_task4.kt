@@ -12,20 +12,20 @@ fun main() {
             |Да, вперед, пожалуйста, вводите свои данные...""".trimMargin()
     )
     val inputLogin = readln()
-    when {
-        (inputLogin == login) -> println("Введите пароль")
-    }
+    if (
+        inputLogin == login)
+        println("Введите пароль")
+    else println("Пожалуйста, пройдите регистрацию!")
     val inputPassword = readln()
-    when {
-        (inputPassword == password) -> println(
+    if (
+        (inputPassword == password))
+        println(
             """|[вздыхает...] Ваши данные проверены, и о, чудо, они верны... Пользователь "$login", вам 
                     |разрешено входить на борт корабля
                     |"Heart of Gold". Хотя мне всё равно... Ну вперед, войдите... Если вам так уж надо, в конце 
                     |концов... [меланхолический вздох...]
                     |Надеюсь, вам понравится пребывание здесь больше, чем мне.""".trimMargin()
         )
+    else println("Incorrect password")
 
-        else -> println("Пожалуйста, пройдите регистрацию!")
-
-    }
 }
