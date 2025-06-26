@@ -43,5 +43,5 @@ fun main() {
     println("Unique genres: ${uniqueGenres.joinToString(", ")}")
 
     val upperTitles = titles.map { it.uppercase() }
-    println(upperTitles.joinToString { ", " })
+    println(upperTitles.joinToString(", "))
 }
