@@ -1,6 +1,14 @@
 package org.example.lesson9
 
 fun main() {
-    val viewsList = listOf(6, 5, 4, 7, 9, 6, 9)
-    println(viewsList.sum())
+    val recipeList = listOf(
+        "2 яйца",
+        "500 мл молока",
+        "250 г муки",
+        "1 ст. ложка сахара",
+        "щепотка соли",
+        "2 ст. ложки растительного масла"
+    )
+    println("В рецепте есть следующие ингредиенты:")
+    recipeList.forEach { println(it) }
 }
