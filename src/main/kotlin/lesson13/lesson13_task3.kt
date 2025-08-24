@@ -14,6 +14,8 @@ fun main() {
         ContactInfo("Alex", 444333222, null),
         ContactInfo("Oleg", 999888777, "Yandex")
     )
-    listOfPersons.forEach { println(it.company ?: "Is not mentioned") }
+    val companies = listOfPersons.mapNotNull { it.company }
+    val uniqueCompanies = companies.toSet()
+    uniqueCompanies.forEach { println(it) }
 
 }
