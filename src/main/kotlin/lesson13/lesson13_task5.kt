@@ -25,7 +25,7 @@ fun main() {
         val phoneNumber = input.toLong()
         val contact = PhoneContactClass("Anna", phoneNumber, "Google")
         contact.printContact()
-    } catch (e: Exception) {
+    } catch (e: NumberFormatException) {
         println("Error ${e::class.simpleName}")
     }
 }
