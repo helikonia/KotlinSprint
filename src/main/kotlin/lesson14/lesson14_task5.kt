@@ -29,6 +29,7 @@ class Chat() {
         return msg.id
     }
 
+
     fun addThreadMessage(parentMessageId: Int, author: String, text: String): Int {
         val child = ChildMessage(nextMessageId++, author, text, parentMessageId)
         messages.add(child)
