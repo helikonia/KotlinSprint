@@ -3,9 +3,9 @@ package org.example.lesson10
 import kotlin.random.Random
 
 fun main() {
-    val machinesResult = generateBones()
+    val machinesResult = generateBones5()
     println("Machines result is: $machinesResult")
-    val humansResult = generateBones()
+    val humansResult = generateBones5()
     println("Humans result is: $humansResult")
 
     when {
@@ -16,4 +16,4 @@ fun main() {
 }
 
 
-fun generateBones(): Int = Random.nextInt(1, 7)
+fun generateBones5(): Int = Random.nextInt(1, 7)
